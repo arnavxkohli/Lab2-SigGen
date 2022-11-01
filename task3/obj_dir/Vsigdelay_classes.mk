@@ -24,12 +24,12 @@ VM_TRACE_FST = 0
 # Generated module classes, fast-path, compile with highest optimization
 VM_CLASSES_FAST += \
 	Vsigdelay \
-	Vsigdelay___024root__DepSet_h8698b9ba__0 \
+	Vsigdelay___024root__DepSet_h7222714e__0 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
 	Vsigdelay___024root__Slow \
-	Vsigdelay___024root__DepSet_h8698b9ba__0__Slow \
+	Vsigdelay___024root__DepSet_h7222714e__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \

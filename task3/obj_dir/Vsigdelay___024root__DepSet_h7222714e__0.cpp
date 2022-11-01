@@ -14,28 +14,33 @@ VL_INLINE_OPT void Vsigdelay___024root___sequent__TOP__0(Vsigdelay___024root* vl
     CData/*7:0*/ __Vdly__sigdelay__DOT__addr;
     CData/*7:0*/ __Vdlyvdim0__sigdelay__DOT__myram__DOT__ram_array__v0;
     CData/*7:0*/ __Vdlyvval__sigdelay__DOT__myram__DOT__ram_array__v0;
+    CData/*0:0*/ __Vdlyvset__sigdelay__DOT__myram__DOT__ram_array__v0;
     // Body
     __Vdly__sigdelay__DOT__addr = vlSelf->sigdelay__DOT__addr;
+    __Vdlyvset__sigdelay__DOT__myram__DOT__ram_array__v0 = 0U;
     if (vlSelf->rst) {
         __Vdly__sigdelay__DOT__addr = 0U;
     } else if (vlSelf->en) {
         __Vdly__sigdelay__DOT__addr = (0xffU & ((IData)(vlSelf->sigdelay__DOT__addr) 
                                                 + (IData)(vlSelf->incr)));
     }
-    vlSelf->delayed_signal = vlSelf->sigdelay__DOT__myram__DOT__ram_array
-        [vlSelf->sigdelay__DOT__myram__DOT__wr_addr];
-    if (vlSelf->rd) {
-        vlSelf->mic_signal = vlSelf->sigdelay__DOT__myram__DOT__ram_array
-            [vlSelf->sigdelay__DOT__addr];
-    }
-    __Vdlyvval__sigdelay__DOT__myram__DOT__ram_array__v0 
-        = vlSelf->din;
-    __Vdlyvdim0__sigdelay__DOT__myram__DOT__ram_array__v0 
-        = vlSelf->sigdelay__DOT__myram__DOT__wr_addr;
-    vlSelf->sigdelay__DOT__myram__DOT__ram_array[__Vdlyvdim0__sigdelay__DOT__myram__DOT__ram_array__v0] 
-        = __Vdlyvval__sigdelay__DOT__myram__DOT__ram_array__v0;
     if (vlSelf->wr) {
-        vlSelf->sigdelay__DOT__myram__DOT__wr_addr 
+        __Vdlyvval__sigdelay__DOT__myram__DOT__ram_array__v0 
+            = vlSelf->din;
+        __Vdlyvset__sigdelay__DOT__myram__DOT__ram_array__v0 = 1U;
+        __Vdlyvdim0__sigdelay__DOT__myram__DOT__ram_array__v0 
+            = vlSelf->sigdelay__DOT__addr;
+    }
+    vlSelf->delayed_signal = vlSelf->sigdelay__DOT__myram__DOT__ram_array
+        [vlSelf->sigdelay__DOT__addr];
+    vlSelf->mic_signal = vlSelf->sigdelay__DOT__myram__DOT__ram_array
+        [vlSelf->sigdelay__DOT__myram__DOT__rd_addr];
+    if (__Vdlyvset__sigdelay__DOT__myram__DOT__ram_array__v0) {
+        vlSelf->sigdelay__DOT__myram__DOT__ram_array[__Vdlyvdim0__sigdelay__DOT__myram__DOT__ram_array__v0] 
+            = __Vdlyvval__sigdelay__DOT__myram__DOT__ram_array__v0;
+    }
+    if (vlSelf->rd) {
+        vlSelf->sigdelay__DOT__myram__DOT__rd_addr 
             = (0xffU & ((IData)(vlSelf->sigdelay__DOT__addr) 
                         + (IData)(vlSelf->offset)));
     }

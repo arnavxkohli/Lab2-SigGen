@@ -45,5 +45,5 @@ VL_ATTR_COLD void Vsigdelay___024root___ctor_var_reset(Vsigdelay___024root* vlSe
     for (int __Vi0=0; __Vi0<256; ++__Vi0) {
         vlSelf->sigdelay__DOT__myram__DOT__ram_array[__Vi0] = VL_RAND_RESET_I(8);
     }
-    vlSelf->sigdelay__DOT__myram__DOT__wr_addr = VL_RAND_RESET_I(8);
+    vlSelf->sigdelay__DOT__myram__DOT__rd_addr = VL_RAND_RESET_I(8);
 }

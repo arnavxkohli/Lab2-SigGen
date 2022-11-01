@@ -29,7 +29,7 @@ counter mycounter(
 
 ram myram(
     .clk (clk),
-    .rd_addr (addr),
+    .wr_addr (addr),
     .offset (offset),
     .din (din),
     .rd (rd),

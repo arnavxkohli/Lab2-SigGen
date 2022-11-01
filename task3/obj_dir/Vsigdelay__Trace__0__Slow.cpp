@@ -51,11 +51,11 @@ VL_ATTR_COLD void Vsigdelay___024root__trace_init_sub__TOP__0(Vsigdelay___024roo
     tracep->declBit(c+5,"wr", false,-1);
     tracep->declBit(c+6,"rd", false,-1);
     tracep->declBus(c+7,"offset", false,-1, 7,0);
-    tracep->declBus(c+11,"rd_addr", false,-1, 7,0);
+    tracep->declBus(c+11,"wr_addr", false,-1, 7,0);
     tracep->declBus(c+8,"din", false,-1, 7,0);
     tracep->declBus(c+10,"dout_write", false,-1, 7,0);
     tracep->declBus(c+9,"dout_read", false,-1, 7,0);
-    tracep->declBus(c+12,"wr_addr", false,-1, 7,0);
+    tracep->declBus(c+12,"rd_addr", false,-1, 7,0);
     tracep->popNamePrefix(2);
 }
 
@@ -110,6 +110,6 @@ VL_ATTR_COLD void Vsigdelay___024root__trace_full_sub_0(Vsigdelay___024root* vlS
     bufp->fullCData(oldp+9,(vlSelf->mic_signal),8);
     bufp->fullCData(oldp+10,(vlSelf->delayed_signal),8);
     bufp->fullCData(oldp+11,(vlSelf->sigdelay__DOT__addr),8);
-    bufp->fullCData(oldp+12,(vlSelf->sigdelay__DOT__myram__DOT__wr_addr),8);
+    bufp->fullCData(oldp+12,(vlSelf->sigdelay__DOT__myram__DOT__rd_addr),8);
     bufp->fullIData(oldp+13,(8U),32);
 }

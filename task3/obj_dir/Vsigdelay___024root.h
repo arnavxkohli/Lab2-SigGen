@@ -24,7 +24,7 @@ class Vsigdelay___024root final : public VerilatedModule {
     VL_OUT8(mic_signal,7,0);
     VL_OUT8(delayed_signal,7,0);
     CData/*7:0*/ sigdelay__DOT__addr;
-    CData/*7:0*/ sigdelay__DOT__myram__DOT__wr_addr;
+    CData/*7:0*/ sigdelay__DOT__myram__DOT__rd_addr;
     CData/*0:0*/ __Vclklast__TOP__clk;
     VlUnpacked<CData/*7:0*/, 256> sigdelay__DOT__myram__DOT__ram_array;
 

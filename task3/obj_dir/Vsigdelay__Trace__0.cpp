@@ -34,7 +34,7 @@ void Vsigdelay___024root__trace_chg_sub_0(Vsigdelay___024root* vlSelf, Verilated
     bufp->chgCData(oldp+8,(vlSelf->mic_signal),8);
     bufp->chgCData(oldp+9,(vlSelf->delayed_signal),8);
     bufp->chgCData(oldp+10,(vlSelf->sigdelay__DOT__addr),8);
-    bufp->chgCData(oldp+11,(vlSelf->sigdelay__DOT__myram__DOT__wr_addr),8);
+    bufp->chgCData(oldp+11,(vlSelf->sigdelay__DOT__myram__DOT__rd_addr),8);
 }
 
 void Vsigdelay___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
